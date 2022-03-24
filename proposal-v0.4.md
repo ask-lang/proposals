@@ -31,9 +31,9 @@ Although `Ask!` provides `ask-cli` to partially solve the two compilation proble
 
 ### Codec
 
-`Ask!` uses a forked version of [as-scale-codec](https://github.com/LimeChain/as-scale-codec) (the upstream doesn't seem to be maintained anymore, last commit was a year ago) for encoding/decoding, but `Ask-lite` uses [as-serde-scale](https://github.com/yjhmelody/serde-as/tree/main/packages/as-serde-scale) instead.
+`Ask!` uses a forked version of [as-scale-codec](https://github.com/LimeChain/as-scale-codec) (the upstream doesn't seem to be maintained anymore, last commit was a year ago) for encoding/decoding, but `Ask-lite` uses [as-serde-scale](https://github.com/ask-lang/serde-as/tree/main/packages/as-serde-scale) instead.
 
-Compared with [as-scale-codec](https://github.com/LimeChain/as-scale-codec), [as-serde-scale](https://github.com/yjhmelody/serde-as/tree/main/packages/as-serde-scale) has better codec performance, more complete implementation, easy to use, and is maintained by ourselves.
+Compared with [as-scale-codec](https://github.com/LimeChain/as-scale-codec), [as-serde-scale](https://github.com/ask-lang/serde-as/tree/main/packages/as-serde-scale) has better codec performance, more complete implementation, easy to use, and is maintained by ourselves.
 
 ### Contract framework
 
