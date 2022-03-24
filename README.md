@@ -1,3 +1,3 @@
 # Proposals
 
-- [ask-lite proposal v0.1](./proposal-v0.1.md)
+- [Ask! v0.4 proposal (original ask-lite v0.1 proposal)](./proposal-v0.4.md)

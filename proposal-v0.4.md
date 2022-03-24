@@ -1,16 +1,18 @@
-# Ask-lite v0.1 Proposal
+# Ask! v0.4 (original Ask-lite v0.1) Proposal
 
-Ask! is a framework to write wasm smart contracts, written by assemblyscript, like ink!. But as far as I know, Patract Labs doesn't maintain it anymore.
+[Ask!](https://github.com/ask-lang/ask) is a framework to write wasm smart contracts, written by assemblyscript, like ink!. But as far as I know, Patract Labs doesn't maintain it anymore.
 
 So we contacted a former member of Patract Labs, who was one of the core developers of Ask!, to continue maintaining a redesigned version, called Ask-lite, which you can think of as a successor to Ask!.
 
 In addition, we also contacted Astar, Phala and other teams who are interested in Ask!, and they are also very interested in Ask-lite. We plan to invite them to join and contribute to ask-lite after finishing the initial version of Ask-lite.
 
+**UPDATE**: we contacted Patract Labs (the maintainer of the original `Ask!` repository) to transfer the `Ask!` repo to the [ask-lang organization](https://github.com/ask-lang). And for less confusion, we will keep the name and icon of `Ask!`, so we will continue to develop `Ask-lite v0.1` as `Ask! v0.4` (a redesigned version).
+
 ## Design
 
 ### Architecture
 
-- Ask! components:
+- `Ask!` components:
   1. Contract Framework
   2. Contract Preprocessor
   3. ask-cli (similar to the `cargo-contract` tool of `ink!`)
@@ -21,7 +23,7 @@ In the first compilation process, `Ask!` only checks the contract syntax, and th
 
 Although `Ask!` provides `ask-cli` to partially solve the two compilation problem, it is not elegant.
 
-- Ask-lite components:
+- `Ask-lite (Ask! v0.4)` components:
     1. Contract Framework
     2. Transform Framework
 
@@ -29,15 +31,15 @@ Although `Ask!` provides `ask-cli` to partially solve the two compilation proble
 
 ### Codec
 
-  Ask! uses [as-scale-codec](https://github.com/LimeChain/as-scale-codec) for encoding/decoding, but Ask-lite uses [as-serde-scale](https://github.com/yjhmelody/serde-as/tree/main/packages/as-serde-scale) instead.
+`Ask!` uses a forked version of [as-scale-codec](https://github.com/LimeChain/as-scale-codec) (the upstream doesn't seem to be maintained anymore, last commit was a year ago) for encoding/decoding, but `Ask-lite` uses [as-serde-scale](https://github.com/yjhmelody/serde-as/tree/main/packages/as-serde-scale) instead.
 
-  Compared with [as-scale-codec](https://github.com/LimeChain/as-scale-codec), [as-serde-scale](https://github.com/yjhmelody/serde-as/tree/main/packages/as-serde-scale) has better codec performance and ease of use, and it is maintained by ourselves.
+Compared with [as-scale-codec](https://github.com/LimeChain/as-scale-codec), [as-serde-scale](https://github.com/yjhmelody/serde-as/tree/main/packages/as-serde-scale) has better codec performance, more complete implementation, easy to use, and is maintained by ourselves.
 
 ### Contract framework
 
 The contract framework will be developed on the basis of the new architecture, using new decorator syntax just like `Ask!`, but it will be closer to the `ink! 3.0` style.
 
-## v0.1 Development plan (12 weeks)
+## Ask! v0.4 (original Ask-lite v0.1) Development plan (12 weeks)
 
 - Week 1~4 (3 developers)
 
@@ -72,3 +74,13 @@ The contract framework will be developed on the basis of the new architecture, u
   1. Write some contract examples, such as flipper/ERC20.
 
   2. Write documentation.
+
+## Cost (34 developers * weeks)
+
+I don't know how to evaluate the cost, so I just followed the cost of the previous `Ask!` proposals.
+
+- Total Cost: $105000
+  - Operating activities: $6400 ( Rent and Devices: $200 per developer * week )
+  - Employee payments: $98600 ($2900 per developer * week)
+- Monthly average: $18.709 / DOT 30 days EMA
+- Treasury Proposal: 5612 DOT
